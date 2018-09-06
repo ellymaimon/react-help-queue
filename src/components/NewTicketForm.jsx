@@ -1,8 +1,13 @@
 import React from 'react'
+import doggo from '../assets/images/aussie.jpg'
 
 function NewTicketForm() {
+  var img = {
+    maxHeight: '300px',
+  }
   return (
     <div>
+      <img style={img} src={doggo} alt="doggo"/>
       <form>
         <input type="text" id="names" placeholder='Pair Names'/>
         <input type="text" id="location" placeholder='Location'/>
