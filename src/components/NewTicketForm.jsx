@@ -1,7 +1,8 @@
 import React from 'react'
 import doggo from '../assets/images/aussie.jpg'
+import PropTypes from 'prop-types';
 
-function NewTicketForm() {
+function NewTicketForm(props) {
   var img = {
     maxHeight: '300px',
   }
@@ -12,6 +13,7 @@ function NewTicketForm() {
 
   function handleNewTicketFormSubmission(event) {
     event.preventDefault();
+    props.onNewTicketCreation({names: _names.value, location: _location.value, issue:_issue.value});
     _names.value = '';
     _location.value= '';
     _issue.value = '';
@@ -37,6 +39,10 @@ function NewTicketForm() {
     </div>
   )
 }
+
+NewTicketForm.propTypes = {
+  onNewTicketCreation: PropTypes.func
+};
 
 export default NewTicketForm;
 
