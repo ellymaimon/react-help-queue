@@ -31,4 +31,4 @@ class NewTicketControl extends Component {
   }
 }
 
-export default NewTicketControl
+export default NewTicketControl;
