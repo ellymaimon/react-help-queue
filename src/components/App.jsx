@@ -1,11 +1,11 @@
-import React from "react";
+import React, {Component} from "react";
 import TicketList from "./TicketList";
 import Header from "./Header";
 import NewTicketControl from './NewTicketControl';
 import Error404 from './Error404';
 import { Switch, Route } from "react-router-dom";
 
-class App extends React.Component {
+class App extends Component {
 
   constructor(props) {
     super(props);

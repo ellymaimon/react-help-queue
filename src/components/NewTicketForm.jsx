@@ -2,6 +2,7 @@ import React from 'react'
 import doggo from '../assets/images/aussie.jpg'
 import PropTypes from 'prop-types';
 import { v4 } from "uuid";
+import Moment from 'moment';
 
 function NewTicketForm(props) {
   var img = {
@@ -14,7 +15,15 @@ function NewTicketForm(props) {
 
   function handleNewTicketFormSubmission(event) {
     event.preventDefault();
-    props.onNewTicketCreation({names: _names.value, location: _location.value, issue:_issue.value, id: v4()});
+    props.onNewTicketCreation(
+        {
+          names: _names.value,
+          location: _location.value,
+          issue:_issue.value,
+          id: v4(),
+          timeOpen: new Moment()
+        }
+      );
     _names.value = '';
     _location.value= '';
     _issue.value = '';
