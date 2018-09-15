@@ -1,7 +1,6 @@
 import React from 'react'
 import doggo from '../assets/images/aussie.jpg'
 import PropTypes from 'prop-types';
-import { v4 } from "uuid";
 import Moment from 'moment';
 
 function NewTicketForm(props) {
@@ -20,7 +19,6 @@ function NewTicketForm(props) {
           names: _names.value,
           location: _location.value,
           issue:_issue.value,
-          id: v4(),
           timeOpen: new Moment()
         }
       );
