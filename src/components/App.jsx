@@ -7,6 +7,7 @@ import Admin from './Admin';
 import { Switch, Route, withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import c from './../constants';
 
 class App extends Component {
 
@@ -27,7 +28,7 @@ class App extends Component {
       const ticket = this.props.masterTicketList[ticketId];
       const newFormattedWaitTime = ticket.timeOpen.fromNow(true);
       const action = {
-        type: 'UPDATE_TIME',
+        type: c.UPDATE_TIME,
         id: ticketId,
         formattedWaitTime: newFormattedWaitTime
       };
