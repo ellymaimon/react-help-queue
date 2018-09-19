@@ -41,7 +41,6 @@ Ticket.propTypes = {
   ticketId: PropTypes.string.isRequired,
   formattedWaitTime: PropTypes.string.isRequired,
   currentRouterPath: PropTypes.string,
-  onTicketSelection: PropTypes.func,
 };
 
 export default connect()(Ticket);
